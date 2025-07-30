@@ -35,3 +35,15 @@ button.primary{
 button.primary:hover{
    box-shadow: 1px 1px 3px var(--primary_action_bg);
 }
+.pagination {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.pagination a {
+  margin: 0 5px;
+  text-decoration: none;
+  background: #ccc;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
