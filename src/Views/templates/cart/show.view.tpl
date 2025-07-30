@@ -42,13 +42,12 @@
     </div>
 
     {{else}}
-      <p style="text-align: center; font-size: 1.2rem; color: #888;">No hay productos en el carrito.</p>
+      <p style="text-align: center; font-size: 1.2rem; color: #888;"></p>
     {{endif productos}}
     <form action="index.php?page=checkout_checkout" method="post">
-    <button type="submit" style="background-color: #27ae60; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-weight: 700; font-size: 1rem; transition: background-color 0.3s ease;">
+   <button type="submit" style="background-color: #27ae60; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 8px; cursor: pointer; font-weight: 700; font-size: 1rem; transition: background-color 0.3s ease;">
   Place Order
 </button>
-
 
   </div>
 </section>

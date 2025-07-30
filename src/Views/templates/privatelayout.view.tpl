@@ -7,18 +7,18 @@
   <title>{{SITE_TITLE}}</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{BASE_DIR}}/public/css/appstyle.css" />
+  <link rel="stylesheet" href="/{{BASE_DIR}}/public/css/appstyle.css" />
   <script src="https://kit.fontawesome.com/{{FONT_AWESOME_KIT}}.js" crossorigin="anonymous"></script>
   {{foreach SiteLinks}}
-  <link rel="stylesheet" href="{{~BASE_DIR}}/{{this}}" />
+  <link rel="stylesheet" href="/{{~BASE_DIR}}/{{this}}" />
   {{endfor SiteLinks}}
   {{foreach BeginScripts}}
-  <script src="{{~BASE_DIR}}/{{this}}"></script>
+  <script src="/{{~BASE_DIR}}/{{this}}"></script>
   {{endfor BeginScripts}}
 </head>
 
 <body>
-  <header>
+  <header style="background-color: #292d2bff; color: white;">
     <input type="checkbox" class="menu_toggle" id="menu_toggle" />
     <label for="menu_toggle" class="menu_toggle_icon">
       <div class="hmb dgn pt-1"></div>
@@ -36,17 +36,20 @@
       </ul>
     </nav>
     {{with login}}
+    <span>{{if ~CART_ITEMS}}{{~CART_ITEMS}}{{endif ~CART_ITEMS}}</span>
     <span class="username">{{userName}} <a href="index.php?page=sec_logout"><i class="fas fa-sign-out-alt"></i></a></span>
     {{endwith login}}
   </header>
   <main>
     {{{page_content}}}
   </main>
-  <footer>
-    <div>Todo los Derechos Reservados {{~CURRENT_YEAR}} &copy;</div>
-  </footer>
+<footer style="background-color: #292d2bff; color: white; padding: 1rem; text-align: center;">
+  <div>Todo los Derechos Reservados grupo 4 {{~CURRENT_YEAR}} &copy;</div>
+</footer>
+
+
   {{foreach EndScripts}}
-  <script src="{{~BASE_DIR}}/{{this}}"></script>
+  <script src="/{{~BASE_DIR}}/{{this}}"></script>
   {{endfor EndScripts}}
 </body>
 </html>
