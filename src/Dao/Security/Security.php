@@ -102,6 +102,8 @@ class Security extends \Dao\Table
         );
     }
 
+    
+
     static private function _hashPassword($password)
     {
         return password_hash(self::_saltPassword($password), PASSWORD_ALGORITHM);
@@ -256,6 +258,8 @@ class Security extends \Dao\Table
     private function __clone()
     {
     }
+
+
 }
 
 
